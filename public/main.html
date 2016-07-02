@@ -7,14 +7,18 @@
 </head>
 <body ng-app="tweetApp">
 	<div id="main" ng-controller="mainController">
-		<form>
-			<input type="text" placeholder="Your Name" />
-			<textarea required maxlength="200" rows="3" placeholder="What's Happening?"></textarea>
+
+		<form ng-submit="post()">
+			<input type="text" placeholder="Your Name" ng-model="newPost.created_by" />
+			<textarea required maxlength="200" rows="3" placeholder="What's Happening?" ng-model="newPost.text"></textarea>
 			<input type="submit" class="button" value="Tweet" />
 		</form>
 
 		<div id="post-stream">
 			<h4>Tweet Feed</h4>
+				<div class="post" ng-repeat="post in posts | orderBy:'created_at':true" ng-class="'odd'" ng-class="'even'">
+					<p>{{post.created_by}} says {{post.text}} at {{post.created_at| date:"h:mma 'on' MMM d, y"}}</p>
+				</div>
 		</div>
 	</div>
 </body>
