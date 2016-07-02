@@ -1,4 +1,20 @@
-var app = angular.module('tweetApp', []);
+var app = angular.module('tweetApp', ['ngRoute']);
+
+app.config(function($routeProvider) {
+	$routeProvider
+		.when('/', {
+			templateUrl: 'main.html',
+			controller: 'mainController'
+		})
+		.when('/login', {
+			templateUrl: 'login.html',
+			controller: 'authController'
+		})
+		.when('/register', {
+			templateUrl: 'register.html',
+			controller: 'authController'
+		});
+});
 
 app.controller('mainController', function($scope) {
 	$scope.posts = [];

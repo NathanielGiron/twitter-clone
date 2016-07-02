@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twitter Clone</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.min.js"></script>
+	<script src="js/tweetApp.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="tweetApp">
+	<div id="main" class="container">
+
+		<nav class="navbar-fluid navbar-default navbar-fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"> Twitter! </a>
+        <p class="navbar-text"> Twitter Clone using the MEAN stack</p>
+        <p class="navbar-right navbar-text"><a href="#/login">Login</a> or <a href="#/register">Register</a></p>
+      </div>
+    </nav>
+
+		<div class="col-md-offset-2 col-md-8">
+			<div ng-view></div>
+	</div>
+</body>
+</html>
