@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twitter Clone by nat</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script src="js/tweetApp.js"></script>
+</head>
+<body ng-app="tweetApp">
+	<div id="main" ng-controller="mainController">
+		<form>
+			<input type="text" placeholder="Your Name" />
+			<textarea required maxlength="200" rows="3" placeholder="What's Happening?"></textarea>
+			<input type="submit" class="button" value="Tweet" />
+		</form>
+
+		<div id="post-stream">
+			<h4>Tweet Feed</h4>
+		</div>
+	</div>
+</body>
+</html>
